@@ -25,15 +25,14 @@ const swiperMain = new Swiper(".gift__swiper--card", {
 const form = document.querySelector(".form");
 const submitButton = form.querySelector(".form__button");
 const phoneInputs = document.querySelectorAll(".form__field--phone");
-const cardInput = form.document.querySelector(".form__card");
+const cardInput = form.querySelector(".form__card");
 
 const updateCardInput = () => {
     const activeSlide = document.querySelector(
-        ".gift__swiper--card swiper-slide-active"
+        ".gift__swiper--card .swiper-slide-active"
     );
 
-    const cardData =
-        activeSlide.querySelector(".gift__card-image").dataset.card;
+    const cardData = activeSlide.querySelector(".gift__card-image").dataset.card;
     cardInput.value = cardData;
 };
 
